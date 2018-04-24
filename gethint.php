@@ -1,5 +1,6 @@
 <?php
 // array with names
+$a[] = "ALGI FAHRI";
 $a[] = "Annisa";
 $a[] = "Hendra Bayau";
 $a[] = "Reyhan Hime-Hime";
