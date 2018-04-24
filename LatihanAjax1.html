@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title> Latihan AJAX1.html </title>
+<head>
+<script> function LoadXMLDoc(){
+var xmlhttp;
+if  (window.XMLHttpRequest){//code untuk IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp = new XMLHttpRequest();
+}else{// kode untuk IE5, IE6
+	xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+	xmlhttp.onreadystatechange = function(){
+if (xmlhttp.readyState==4 && xmlhttp.status==200){
+	document.getElementById("isi").innerHTML=xmlhttp.responseText;
+	}}
+	xmlhttp.open("GET","text1.xml",true);
+	xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<div id="isi">
+<h2> Data Utama Sebelum Diubah</h2></div>
+<button type="button" onclick="LoadXMLDoc()"> Ubah Data Diatas </button>
+</body>
+</html>
